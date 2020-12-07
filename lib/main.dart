@@ -13,13 +13,17 @@ class HomePage extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
+        width: double.infinity,
+        height: size.height,
         child: Column(
           children: <Widget>[
             Container(
-                height: 250,
+                height: size.height * 0.44,
+                width: double.infinity,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/topui.png'),
@@ -27,10 +31,10 @@ class HomePage extends StatelessWidget {
                 child: Stack(
                   children: <Widget>[
                     Positioned(
-                      left: 30,
-                      top: 50,
-                      width: 35,
-                      height: 140,
+                      left: size.height * 0.052,
+                      top: size.height * 0.088,
+                      width: size.height * 0.0616,
+                      height: size.height * 0.24,
                       child: FadeAnimation(
                           2,
                           Container(
@@ -40,10 +44,10 @@ class HomePage extends StatelessWidget {
                           )),
                     ),
                     Positioned(
-                      left: 140,
-                      top: 5,
-                      width: 50,
-                      height: 120,
+                      left: size.height * 0.24,
+                      top: size.height * 0.01,
+                      width: size.height * 0.088,
+                      height: size.height * 0.21,
                       child: FadeAnimation(
                           3,
                           Container(
@@ -53,10 +57,10 @@ class HomePage extends StatelessWidget {
                           )),
                     ),
                     Positioned(
-                      right: 40,
-                      top: 115,
-                      width: 80,
-                      height: 150,
+                      right: size.height * 0.06,
+                      top: size.height * 0.2,
+                      width: size.height * 0.14,
+                      height: size.height * 0.26,
                       child: FadeAnimation(
                           3,
                           Container(
@@ -69,13 +73,13 @@ class HomePage extends StatelessWidget {
                       child: FadeAnimation(
                           3,
                           Container(
-                            margin: EdgeInsets.only(top: 20),
+                            margin: EdgeInsets.only(top: size.height * 0.035),
                             child: Center(
                               child: Text(
                                 "Login",
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 40,
+                                    fontSize: size.height * 0.07,
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
@@ -86,7 +90,7 @@ class HomePage extends StatelessWidget {
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: EdgeInsets.all(30),
+                  padding: EdgeInsets.all(size.height * 0.05),
                   child: Column(
                     children: <Widget>[
                       FadeAnimation(
@@ -132,12 +136,12 @@ class HomePage extends StatelessWidget {
                             ),
                           )),
                       SizedBox(
-                        height: 30,
+                        height: size.height * 0.052,
                       ),
                       FadeAnimation(
                           2,
                           Container(
-                            height: 50,
+                            height: size.height * 0.088,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Color(0xffbc00dd)),
@@ -152,7 +156,7 @@ class HomePage extends StatelessWidget {
                             ),
                           )),
                       SizedBox(
-                        height: 30,
+                        height: size.height * 0.052,
                       ),
                       FadeAnimation(
                           4,
